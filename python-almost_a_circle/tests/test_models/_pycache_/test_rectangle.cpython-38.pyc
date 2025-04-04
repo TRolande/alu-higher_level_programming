@@ -1,0 +1,266 @@
+U
+    ñ’c¤/  ã                   @   s^   d Z ddlZddlmZ ddlmZ ddlmZ ddl mZ dd l	m
+Z
+ G dd	„ d	ejƒZ
+dS )
+z! Module for test Rectangle class é    N)ÚStringIO)ÚTestCase)Úpatch)Ú	Rectangle)ÚBasec                   @   s`  e Zd ZdZdd„ Zdd„ Zdd „ Zdd	„ Z d
+d
+„ Zdd
+„ Z	dd„ Z
+dd„ Z
+dd„ Zdd„ Z
+dd„ Zdd„ Zdd„ Zdd„ Zdd„ Zd d!„ Zd"d#„ Zd$d%„ Zd&d'„ Zd(d)„ Zd*d+„ Zd,d-„ Zd.d/„ Zd0d1„ Zd2d3„ Zd4d5„ Zd6d7„ Zd8d9„ Zd:d;„ Z d<d=„ Z!d>d?„ Z"d@dA„ Z#dBdC„ Z$dDdE„ Z%dFdG„ Z&dHdI„ Z'dJdK„ Z(dLdM„ Z)dNdO„ Z*dPdQ„ Z+dRdS„ Z,dTdU„ Z-dVS )WÚTestRectangleMethodsz Suite to test Rectangle class c                 C   s
+   dt _dS )z Method invoked for each test r   N)r   Ú_Base__nb_objects)Úself© r
+   ú]/root/alu-higher_level_programming/python-almost_a_circle/tests/test_models/test_rectangle.pyÚsetUp   s    zTestRectangleMethods.setUpc                 C   sT   t ddƒ}|  |jd¡ |  |jd¡ |  |jd¡ |  |jd¡ |  |jd¡ dS )z Test new rectangle é   r   N© r   Ú
+assertEqualÚwidthÚheightÚxÚyÚid©r	   Únewr
+   r
+   r
+   Útest_new_rectangle   s    
+z'TestRectangleMethods.test_new_rectanglec                 C   sZ   t dddddƒ}|  |jd¡ |  |jd¡ |  |jd¡ |  |jd¡ |  |jd¡ dS )z# Test new rectangle with all attrs é   é   é   é   Nr   r   r
+   r
+   r
+   Útest_new_rectangle_2   s    z)TestRectangleMethods.test_new_rectangle_2c                 C   s<   t ddƒ}t ddƒ}|  d||k¡ |  d|j|jk¡ dS )z Test new rectangles r
+   FN)r   r   r   ©r	   r   Únew2r
+   r
+   r
+   Útest_new_rectangles$   s    
+
+z(TestRectangleMethods.test_new_rectanglesc                 C   s    t ddƒ}|  dt|tƒ¡ dS )z# Test Rectangle is a Base instance r
+   TN)r   r   Ú
+isinstancer   r   r
+   r
+   r
+   Útest_is_Base_instance+   s    
+z*TestRectangleMethods.test_is_Base_instancec              	   C   s"   |   t¡ tdƒ}W 5 Q R X dS )z$ Test error raise with 1 arg passed r
+   N©ÚassertRaisesÚ	TypeErrorr   r   r
+   r
+   r
+   Útest_incorrect_amount_attrs0   s    z0TestRectangleMethods.test_incorrect_amount_attrsc              	   C   s    |   t¡ tƒ }W 5 Q R X dS )z' Test error raised with no args passed Nr"   r   r
+   r
+   r
+   Útest_incorrect_amount_attrs_15   s    z2TestRectangleMethods.test_incorrect_amount_attrs_1c              	   C   s*   t ddƒ}|  t¡ |j W 5 Q R X dS ©z) Trying to access to a private attribute r
+   N)r   r#   ÚAttributeErrorZ_TestRectangleMethods__widthr   r
+   r
+   r
+   Útest_access_private_attrs:   s    
+z.TestRectangleMethods.test_access_private_attrsc              	   C   s*   t ddƒ}|  t¡ |j W 5 Q R X dS r'   )r   r#   r(   Z_TestRectangleMethods__heightr   r
+   r
+   r
+   Útest_access_private_attrs_2@   s    
+z0TestRectangleMethods.test_access_private_attrs_2c              	   C   s*   t ddƒ}|  t¡ |j W 5 Q R X dS r'   )r   r#   r(   Z_TestRectangleMethods__xr   r
+   r
+   r
+   Útest_access_private_attrs_3F   s    
+z0TestRectangleMethods.test_access_private_attrs_3c              	   C   s*   t ddƒ}|  t¡ |j W 5 Q R X dS r'   )r   r#   r(   Z_TestRectangleMethods__yr   r
+   r
+   r
+   Útest_access_private_attrs_4L   s    
+z0TestRectangleMethods.test_access_private_attrs_4c              	   C   s*   |   t¡ tdddddƒ}W 5 Q R X dS )ú Trying to pass a string value Ú2r   Nr"   r   r
+   r
+   r
+   Útest_valide_attrsR   s    z&TestRectangleMethods.test_valide_attrsc              	   C   s*   |   t¡ tdddddƒ}W 5 Q R X dS ©r-   r   r.   Nr"   r   r
+   r
+   r
+   Útest_valide_attrs_2W   s    z(TestRectangleMethods.test_valide_attrs_2c              	   C   s*   |   t¡ tdddddƒ}W 5 Q R X dS r0   r"   r   r
+   r
+   r
+   Útest_valide_attrs_3\   s    z(TestRectangleMethods.test_valide_attrs_3c              	   C   s*   |   t¡ tdddddƒ}W 5 Q R X dS r0   r"   r   r
+   r
+   r
+   Útest_valide_attrs_4a   s    z(TestRectangleMethods.test_valide_attrs_4c              	   C   s$   |   t¡ tddƒ}W 5 Q R X dS )ú Trying to pass invalid values r   r
+   N©r#   Ú
+ValueErrorr   r   r
+   r
+   r
+   Útest_value_attrsf   s    z%TestRectangleMethods.test_value_attrsc              	   C   s$   |   t¡ tddƒ}W 5 Q R X dS )r4   r
+   r   Nr5   r   r
+   r
+   r
+   Útest_value_attrs_1k   s    z'TestRectangleMethods.test_value_attrs_1c              	   C   s&   |   t¡ tdddƒ}W 5 Q R X dS ©r4   r
+   éÿÿÿÿNr5   r   r
+   r
+   r
+   Útest_value_attrs_2p   s    z'TestRectangleMethods.test_value_attrs_2c              	   C   s(   |   t¡ tddddƒ}W 5 Q R X dS r9   r5   r   r
+   r
+   r
+   Útest_value_attrs_3u   s    z'TestRectangleMethods.test_value_attrs_3c                 C   s   t ddƒ}|  | ¡ d¡ dS )ú* Checking the return value of area method r   r   é   N©r   r   Úarear   r
+   r
+   r
+   Ú	test_areaz   s    
+zTestRectangleMethods.test_areac                 C   sJ   t ddƒ}|  | ¡ d¡ d|_|  | ¡ d¡ d|_|  | ¡ d¡ dS ) r=   r   r   r   é
+   é   N)r   r   r@   r   r   r   r
+   r
+   r
+   Ú
+test_area_2   s    
+z TestRectangleMethods.test_area_2c                 C   s8   t ddƒ}|  | ¡ d¡ t ddƒ}|  | ¡ d¡ dS ) r=   r   é   é   rB   éd   Nr?   r   r
+   r
+   r
+   Ú
+test_area_3ˆ   s    
+
+z TestRectangleMethods.test_area_3c              	   C   sD   t ddƒ}d}tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X dS ) ú Test string printed r   r   z##
+##
+##
+##
+##
+ú
+sys.stdout©r   N©r   r   r   Ú displayr   Úgetvalue©r	   Úr1ÚresÚ str_outr
+   r
+   r
+   Útest_display   s
+    
+z!TestRectangleMethods.test_displayc              	   C   s€   t ddƒ}d}tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X d|_d}tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X d S )rI   r   z##
+##
+rJ   rK   r   z#####
+#####
+N) r   r   r   rM   r   rN   r   rO   r
+   r
+   r
+   Útest_display_2—   s    
+z#TestRectangleMethods.test_display_2c              	   C   sH   t ddddƒ}d}tdtƒ d}t|ƒ |  | ¡ |¡ W 5 Q R X d S )ú Test __str__ return value r   r   r   z[Rectangle] (1) 2/4 - 2/5
+rJ   rK   N©r   r   r   Úprintr   rN   rO   r
+   r
+   r
+   Útest_str¥   s
+    zTestRectangleMethods.test_strc              	   C   s’   t dddddƒ}d}tdtƒ d }t|ƒ |  | ¡ |¡ W 5 Q R X d|_d	|_ d
+|_d
+}tdtƒ d }t|ƒ |  | ¡ |¡ W 5 Q R X dS )
+rU   r   r   rE   rB   z[Rectangle] (10) 8/8 - 3/2
+rJ   rK   r
+   é    é   z[Rectangle] (1) 8/8 - 7/15
+N)	r   r   r   rW   r   rN   r   r   r   rO   r
+   r
+   r
+   Ú
+test_str_2­   s    zTestRectangleMethods.test_str_2c              	   C   sÌ   t ddƒ}d}tdtƒ d}t|ƒ |  | ¡ |¡ W 5 Q R X t dd dd	ƒ}d
+}tdtƒ d}t|ƒ |  | ¡ |¡ W 5 Q R X t d
+d
+d
+d
+ƒ}d}tdtƒ d}t|ƒ |  | ¡ |¡ W 5 Q R X d
+S )rU   r   rB   z[Rectangle] (1) 0/0 - 5/10
+rJ   rK   rC   éV   r   rY   z[Rectangle] (2) 4/7 - 25/86
+r
+   z[Rectangle] (3) 1/1 - 1/1
+NrV   )r	   rP   rQ   rR   Úr2Zr3r
+   r
+   r
+   Ú
+test_str_3½   s    
+zTestRectangleMethods.test_str_3c                 C   s"   t ddƒ}d}|  | ¡ |¡ dS )rU   r   z[Rectangle] (1) 0/0 - 3/3N)r   r   Ú __str__)r	   rP   rQ   r
+   r
+   r
+   Ú
+test_str_4Ñ   s    
+zTestRectangleMethods.test_str_4c              	   C   sH   t ddddƒ}d}tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X d S )rI   r   r   r
+   z
+ #####
+ #####
+ #####
+ #####
+rJ   rK   NrL   rO   r
+   r
+   r
+   Útest_display_3×   s
+    z#TestRectangleMethods.test_display_3c              	   C   s¼   t ddƒ}d}tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X d|_d }tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X d|_ d}tdtƒ d}| ¡  |  | ¡ |¡ W 5 Q R X d	S )
+rI   r   r   z###
+###
+rJ   rK   r   z    ###
+    ###
+z
+
+    ###
+    ###
+N)r   r   r   rM   r   rN   r   r   rO   r
+   r
+   r
+   Útest_display_4ß   s    
+z#TestRectangleMethods.test_display_4c              	   C   sÎ   t dddddƒ}d}tdtƒ d }t|ƒ |  | ¡ |¡ W 5 Q R X |  |jd¡ |  |j d¡ |  |jd¡ |  |j	d¡ |  |j
+d¡ d}tdtƒ d &}tt
+| ¡ ƒƒ |  | ¡ |¡ W 5 Q R X d	S )
+ú Test dictionary returned r
+   r   r   r   z[Rectangle] (1) 3/4 - 1/2
+rJ   rK   ú<class 'dict'>
+N)
+r   r   r   rW   r   rN   r   r   r   r   r   ÚtypeÚ
+to_dictionaryrO   r
+   r
+   r
+   Útest_to_dictionaryó   s    z'TestRectangleMethods.test_to_dictionaryc              	   C   s&  t ddddƒ}d}tdtƒ d}t|ƒ |  | ¡ |¡ W 5 Q R X t ddƒ}d }tdtƒ d}t|ƒ |  | ¡ |¡ W 5 Q R X | ¡ }|j f |Ž |  |j|j¡ |  |j	|j	¡ |  |j
+|j
+¡ |  |j
+|j
+¡ |  |j|j¡ d}tdtƒ d"}tt
+|ƒƒ |  | ¡ |¡ W 5 Q R X d	S )
+rc   r   z[Rectangle] (1) 2/2 - 2/2
+rJ   rK   r   rY   z[Rectangle] (2) 0/0 - 5/7
+rd   N)r   r   r   rW   r   rN   rf   Úupdater   r   r   r   r   re   )r	   rP   rQ   rR   r]   Z
+r1_dictionaryr
+   r
+   r
+   Útest_to_dictionary_2   s*    
+z)TestRectangleMethods.test_to_dictionary_2c              	   C   sj   t ddƒ}| ¡ }t |g¡}d | ¡ ¡}tdt ƒ d&}t|ƒ |  	| 
+¡ | 
+dd¡¡ W 5 Q R X d S )z  Test Dictionary to JSON string r   z[{}]
+rJ   rK   ú'ú"N)r   rf   r   Úto_json_stringÚformatr_   r   r   rW   r   rN   Ú replace)r	   rP   Ú
+dictionaryZjson_dictionaryrQ   rR   r
+   r
+   r
+   Útest_dict_to_json#  s    
+z&TestRectangleMethods.test_dict_to_jsonc              	   C   s$   |   t¡ tddƒ}W 5 Q R X dS )ú Test args passed r:   r   Nr5   ©r	   rP   r
+   r
+   r
+   Útest_check_value.  s    z%TestRectangleMethods.test_check_valuec              	   C   s$   |   t¡ tddƒ}W 5 Q R X dS )rq   r
+   éþÿÿÿNr5   rr   r
+   r
+   r
+   Útest_check_value_23  s    z'TestRectangleMethods.test_check_value_2c                 C   s&   ddi}t jf |Ž}|  |jd¡ dS )ú Test create method r   éY   N)r   Úcreater   r   ©r	   ro   rP   r
+   r
+   r
+   Ú
+test_create8  s    z TestRectangleMethods.test_createc                 C   s6   dddœ}t jf |Ž}|  |jd¡ |  |jd¡ dS )rv   rw   r
+   )r   r   N)r   rx   r   r   r   ry   r
+   r
+   r
+   Ú
+test_create_2>  s    
+z"TestRectangleMethods.test_create_2c                 C   sF   ddddœ}t jf |Ž}|  |jd¡ |  |jd¡ |  |jd¡ dS )rv   rw   r
+   r   )r   r   r   N)r   rx   r   r   r   r   ry   r
+   r
+   r
+   Ú
+test_create_3E  s
+    z"TestRectangleMethods.test_create_3c                 C   sV   dddddœ}t jf |Ž}|  |jd¡ |  |jd¡ |  |jd¡ |  |jd¡ dS ) rv   rw   r
+   r   r   )r   r   r   r   N) r   rx   r   r   r   r   r   ry   r
+   r
+   r
+   Ú
+test_create_4M  s    z"TestRectangleMethods.test_create_4c                 C   sf   ddddddœ}t jf |Ž}|  |jd¡ |  |jd¡ |  |jd¡ |  |jd¡ |  |j d¡ d S )rv   rw   r
+   r   r   r   )r   r   r   r   r   N)r   rx   r   r   r   r   r   r   ry   r
+   r
+   r
+   Ú
+test_create_5V  s    z"TestRectangleMethods.test_create_5c                 C   s   t  ¡ }|  |g ¡ dS )ú Test load JSON file N)r   Úload_from_filer   )r	   Z	load_filer
+   r
+   r
+   Útest_load_from_file`  s    z(TestRectangleMethods.test_load_from_filec                 C   sd   t ddƒ}t ddddƒ}||g}t  |¡ t  ¡ }tt|ƒƒD ] }|  ||  ¡ ||  ¡ ¡ q>dS )r   r   rE   r   N) r   Úsave_to_filer€   ÚrangeÚlenr   r_   )r	   rP   r]   ZlinputZ loutputÚir
+   r
+   r
+   Útest_load_from_file_2e  s    
+
+z*TestRectangleMethods.test_load_from_file_2N).Ú__name__Ú
+__module__Ú__qualname__Ú __doc__r   r   r   r   r!   r%   r&   r)   r*   r+   r,   r/   r1   r2   r3   r7   r8   r;   r<   rA   rD   rH   rS   rT   rX   r[   r^   r`   ra   rb   rg   ri   rp   rs   ru   rz   r{   r|   r}   r~   r   r†   r
+   r
+   r
+   r
+   r    
+   sV   		 	 
+ 	
+r    )rŠ   ÚunittestÚior   r   Ú
+unittest.mockr   Úmodels.rectangler   Ú
+models.baser   r    r
+   r
+   r
+   r
+   Ú<module>   s   

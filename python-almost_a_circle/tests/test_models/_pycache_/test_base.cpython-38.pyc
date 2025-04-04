@@ -1,0 +1,77 @@
+U
+   ñ’cÌ
+  ã                   @   sj   d Z ddlZddlmZ ddlmZ ddlm Z  ddlm	Z	 dd lm
+Z
+ ddl
+mZ G d	d
+„ d
+ej
+ƒZ
+dS )
+z Module for test Base class é    N)ÚBase)ÚSquare)Ú	Rectangle)ÚStringIO)ÚTestCase)Úpatchc                   @   s`   e Zd ZdZdd„ Zdd„ Zdd „ Zdd	„ Z d
+d8
+„ Zdd
+„ Z	dd„ Z
+dd„ Z
+dd„ Zdd„ Z
+dS )ÚTestBaseMethodsz Suite to test Base class c                 C   s
+   dt _dS )z Method invoked for each test r   N)r   Z_Base__nb_objects)Úself© r
+   úX/root/alu-higher_level_programming/python-almost_a_circle/tests/test_models/test_base.pyÚsetUp   s    zTestBaseMethods.setUpc                 C   s   t dƒ}|  |jd¡ dS )z Test assigned id é   N©r   Ú
+assertEqualÚid©r	   Únewr
+   r
+   r
+   Ú test_id   s    zTestBaseMethods.test_idc                 C   s   t ƒ }|  |jd¡ dS )z Test default id r
+   Nr   r   r
+   r
+   r
+   Útest_id_default   s    zTestBaseMethods.test_id_defaultc                 C   s@   t ƒ }t ƒ }t ƒ }|  |jd¡ |  |jd¡ |  |jd¡ dS )z Test nb object attribute r
+   é   é   Nr   ©r	   r   Znew2Znew3r
+   r
+   r
+   Útest_id_nb_objects   s    z"TestBaseMethods.test_id_nb_objectsc                 C   sB   t ƒ }t dƒ}t ƒ }|  |jd¡ |  |jd¡ |  |jd¡ dS )z+ Test nb object attributes and assigned id i   r
+   r   Nr   r   r
+   r
+   r
+   Ú
+test_id_mix&   s    zTestBaseMethods.test_id_mixc                 C   s   t dƒ}|  |jd¡ dS )z Test string id Ú1Nr   r   r
+   r
+   r
+   Útest_string_id/   s    zTestBaseMethods.test_string_idc              	   C   s$   |   t¡ tddƒ}W 5 Q R X dS )z' Test passing more args to init method r
+   N)ÚassertRaisesÚ	TypeErrorr   r   r
+   r
+   r
+   Útest_more_args_id4   s    z!TestBaseMethods.test_more_args_idc              	   C   s&   t ƒ }|  t¡ |j W 5 Q R X dS )z& Test accessing to private attributes N)r   r   ÚAttributeErrorZ_TestBaseMethods__nb_objectsr   r
+   r
+   r
+   Útest_access_private_attrs9   s    z)TestBaseMethods.test_access_private_attrsc              
+   C   sª   t  d¡ d}tddƒ<}tdtƒ d"}t| ¡ ƒ |   | ¡ |¡ W 5 Q R X W 5 Q R X zt	 
+d¡ W n   Y nX t  g ¡ tddƒ}|   | ¡ d ¡ W 5 Q R X dS )ú Test JSON file Nú[]
+z
+Square.jsonÚrú8
+sys.stdout©r   ú[])
+r   Úsave_to_fileÚopenr    r   ÚprintÚreadr   ÚgetvalueÚosÚremove©r	   ÚresÚfileZ str_outr
+   r
+   r
+   Útest_save_to_file_1?   s    
+$
+z#TestBaseMethods.test_save_to_file_1c              
+   C   sª   t  d¡ d}tddƒ<}tdtƒ d"}t| ¡ ƒ |   | ¡ |¡ W 5 Q R X W 5 Q R X zt	 
+d¡ W n   Y nX t  g ¡ tddƒ}|   | ¡ d ¡ W 5 Q R X dS )r!   Nr"   zRectangle.jsonr#   r$   r%   r&   )
+r   r'   r(   r    r   r)   r*   r   r+   r,   r-   r.   r
+   r
+   r
+   Útest_save_to_file_2Q   s    
+$
+z#TestBaseMethods.test_save_to_file_2N)Ú__name__Ú
+__module__Ú__qualname__Ú __doc__r   r   r   r   r   r   r   r    r1   r2   r
+   r
+   r
+   r
+   r      s   		r   )r6   ZunittestZ
+models.baser   Z
+models.squarer   Zmodels.rectangler   Úior   r   Z
+unittest.mockr    r   r
+   r
+   r
+   r
+   Ú<module>   s   
